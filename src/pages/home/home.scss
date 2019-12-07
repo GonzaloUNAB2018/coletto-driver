@@ -1,3 +1,86 @@
 page-home {
 
+  .avatar{
+    height: 40px;
+    border-radius: 5px;
+  }
+  
+    .toolbar-background.toolbar-background-md{
+      background-color: transparent;
+    }
+
+    .itemBg{
+        background-color: color($colors, secondary);
+        h2{
+            color: color($colors, light);
+        }
+    }
+
+    .on {
+        padding: 15px 25px;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+      }
+      
+    .on:hover {background-color: #3e8e41}
+      
+    .on:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+
+      .off {
+        padding: 15px 25px;
+        font-size: 50px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: #af4c4c;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+      }
+      
+    .off:hover {background-color: #8d1111}
+      
+    .off:active {
+        background-color: #8d1111;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+    
+      .standBy {
+        padding: 15px 25px;
+        font-size: 50px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: #afa7a7;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+      }
+      
+    .standBy:hover {background-color: #8a7c7c}
+      
+    .standBy:active {
+        background-color: #8a7c7c;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+      }
+    
+      .icon_button{
+          font-size: 50px;
+      }
+
 }

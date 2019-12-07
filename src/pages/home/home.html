@@ -1,14 +1,58 @@
 <ion-header>
   <ion-navbar>
+    <img left class="avatar" src="https://cdn.pixabay.com/photo/2017/01/31/21/23/avatar-2027366_960_720.png">
     <ion-title>
-      Ionic Blank
+      Chofer "nombre"
     </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        SALIR
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-card class="on" *ngIf="way&&connected" (tap)="selectWayCero()">
+    <ion-card-content>
+      <ion-icon class="icon_button" name="repeat"></ion-icon>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="off" *ngIf="!way&&connected" (tap)="selectWayOne()">
+    <ion-card-content>
+      <ion-icon class="icon_button" name="repeat"></ion-icon>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="standBy" *ngIf="!connected">
+    <ion-card-content>
+      <ion-icon class="icon_button" name="repeat"></ion-icon>
+    </ion-card-content>
+  </ion-card>
+  <!--ion-grid-->
+    <ion-row>
+      <ion-col>
+        <ion-card class="on" *ngIf="connected" (tap)="toDisconnectUser()">
+          <ion-card-content padding>
+            <ion-icon class="icon_button" name="power"></ion-icon>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="off" *ngIf="!connected" (tap)="toConnectUser()">
+          <ion-card-content padding>
+            <ion-icon class="icon_button" name="power"></ion-icon>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="on" *ngIf="navigated" (tap)="stopNav()">
+          <ion-card-content padding>
+            <ion-icon class="icon_button" name="square"></ion-icon>
+          </ion-card-content>
+        </ion-card>
+        <ion-card class="off" *ngIf="!navigated" (tap)="initNav()">
+          <ion-card-content padding>
+            <ion-icon class="icon_button" name="play"></ion-icon>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  <!--/ion-grid-->
 </ion-content>
